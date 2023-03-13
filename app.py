@@ -3,7 +3,9 @@ from flask_sqlalchemy import SQLAlchemy #SQLAlchemy is an open-source SQL toolki
 from datetime import datetime
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SECRET_KEY'] = 'rzbGKyLuzh082r6E_1Vdj62m8W7pIu9S' 
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://rrnrxact:rzbGKyLuzh082r6E_1Vdj62m8W7pIu9S@babar.db.elephantsql.com/rrnrxact'
 db = SQLAlchemy(app) 
 
 class Todo(db.Model):
